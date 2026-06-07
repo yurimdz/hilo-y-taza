@@ -1,0 +1,48 @@
+<section id="contacto" class="contacto-section">
+  <div class="container">
+    <h2 class="section-title">Reservá tu Experiencia</h2>
+    <p class="section-subtitle">Escribinos y coordinamos tu visita a Hilo & Taza.</p>
+
+    <div class="form-wrap">
+      <div class="enviado-msg" *ngIf="enviado">
+        <span>✅</span>
+        <p>¡Gracias! Tu reserva fue recibida. Te contactamos pronto.</p>
+        <button (click)="enviado = false">Hacer otra reserva</button>
+      </div>
+
+      <div *ngIf="!enviado">
+        <div class="form-group">
+          <label>Nombre completo</label>
+          <input type="text" [(ngModel)]="form.nombre" placeholder="Tu nombre" />
+          <span class="error" *ngIf="errores.nombre">{{ errores.nombre }}</span>
+        </div>
+
+        <div class="form-group">
+          <label>Correo electrónico</label>
+          <input type="email" [(ngModel)]="form.email" placeholder="tucorreo@ejemplo.com" />
+          <span class="error" *ngIf="errores.email">{{ errores.email }}</span>
+        </div>
+
+        <div class="form-group">
+          <label>Experiencia de interés</label>
+          <select [(ngModel)]="form.experiencia">
+            <option value="">Seleccioná una opción</option>
+            <option value="ceramica">Pintura de Cerámica</option>
+            <option value="lienzo">Pintura en Lienzo</option>
+            <option value="pulseras">Pulseras Personalizadas</option>
+            <option value="joyeria">Joyería Personalizada</option>
+          </select>
+          <span class="error" *ngIf="errores.experiencia">{{ errores.experiencia }}</span>
+        </div>
+
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea [(ngModel)]="form.mensaje" placeholder="Contanos cuándo querés venir, cuántas personas son..." rows="4"></textarea>
+          <span class="error" *ngIf="errores.mensaje">{{ errores.mensaje }}</span>
+        </div>
+
+        <button class="btn-enviar" (click)="enviar()">Enviar reserva</button>
+      </div>
+    </div>
+  </div>
+</section>

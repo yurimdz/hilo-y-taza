@@ -1,0 +1,83 @@
+.menu-section {
+  background: white;
+}
+
+.filtros {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filtros button {
+  padding: 10px 24px;
+  border: 2px solid var(--rosa);
+  background: transparent;
+  color: var(--oscuro);
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: 'Lato', sans-serif;
+  transition: all 0.3s;
+}
+
+.filtros button.activo,
+.filtros button:hover {
+  background: var(--rosa);
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.menu-card {
+  border-radius: 12px;
+  border: 1px solid rgba(232,165,165,0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.menu-card-body {
+  padding: 24px;
+}
+
+.menu-categoria {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--verde);
+  font-weight: 700;
+}
+
+.menu-card h3 {
+  font-size: 1.2rem;
+  color: var(--oscuro);
+  margin: 8px 0;
+}
+
+.menu-card p {
+  color: var(--gris);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.menu-precio {
+  background: var(--terracota);
+  color: white;
+  padding: 12px 24px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: right;
+}

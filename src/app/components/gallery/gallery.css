@@ -1,0 +1,132 @@
+.galeria-section {
+  background: var(--crema);
+}
+
+.galeria-principal {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.galeria-imagen-wrap {
+  flex: 1;
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 16/9;
+}
+
+.galeria-imagen-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.galeria-imagen-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.galeria-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(44,36,22,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.galeria-imagen-wrap:hover .galeria-overlay {
+  opacity: 1;
+}
+
+.nav-btn {
+  background: var(--terracota);
+  color: white;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+
+.nav-btn:hover {
+  background: var(--verde);
+}
+
+.galeria-thumbs {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.galeria-thumbs img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s, transform 0.3s;
+  border: 2px solid transparent;
+}
+
+.galeria-thumbs img.activa,
+.galeria-thumbs img:hover {
+  opacity: 1;
+  border-color: var(--terracota);
+  transform: scale(1.05);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.lightbox-content img {
+  width: 100%;
+  border-radius: 12px;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.lightbox-content p {
+  color: white;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.lightbox-cerrar {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

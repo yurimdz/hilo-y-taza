@@ -1,0 +1,62 @@
+#experiencias {
+  background: var(--crema);
+}
+
+.experiences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.experience-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-top: 4px solid var(--rosa);
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+}
+
+.exp-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.experience-card h3 {
+  font-size: 1.3rem;
+  color: var(--terracota);
+  margin-bottom: 10px;
+}
+
+.experience-card p {
+  color: var(--gris);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.exp-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.exp-duracion {
+  color: var(--verde);
+  font-weight: 600;
+}
+
+.exp-precio {
+  background: var(--rosa);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+}

@@ -1,0 +1,26 @@
+<section id="menu" class="menu-section">
+  <div class="container">
+    <h2 class="section-title">Nuestro Menú</h2>
+    <p class="section-subtitle">Café artesanal y postres hechos con amor, todos los días.</p>
+
+    <div class="filtros">
+      <button
+        *ngFor="let cat of categorias"
+        [class.activo]="cat === categoriaActiva"
+        (click)="filtrar(cat)">
+        {{ cat }}
+      </button>
+    </div>
+
+    <div class="menu-grid">
+      <div class="menu-card" *ngFor="let item of itemsFiltrados">
+        <div class="menu-card-body">
+          <span class="menu-categoria">{{ item.categoria }}</span>
+          <h3>{{ item.nombre }}</h3>
+          <p>{{ item.descripcion }}</p>
+        </div>
+        <div class="menu-precio">₡{{ item.precio | number }}</div>
+      </div>
+    </div>
+  </div>
+</section>

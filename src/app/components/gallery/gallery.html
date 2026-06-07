@@ -1,0 +1,35 @@
+<section id="galeria" class="galeria-section">
+  <div class="container">
+    <h2 class="section-title">Galería</h2>
+    <p class="section-subtitle">Momentos, creaciones y el ambiente que nos define.</p>
+
+    <div class="galeria-principal">
+      <button class="nav-btn prev" (click)="anterior()">&#8592;</button>
+      <div class="galeria-imagen-wrap" (click)="abrir(fotos[fotoActiva])">
+        <img [src]="fotos[fotoActiva].url" [alt]="fotos[fotoActiva].alt" />
+        <div class="galeria-overlay">
+          <span>Ver imagen</span>
+        </div>
+      </div>
+      <button class="nav-btn next" (click)="siguiente()">&#8594;</button>
+    </div>
+
+    <div class="galeria-thumbs">
+      <img
+        *ngFor="let foto of fotos; let i = index"
+        [src]="foto.url"
+        [alt]="foto.alt"
+        [class.activa]="i === fotoActiva"
+        (click)="fotoActiva = i" />
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" *ngIf="fotoAbierta" (click)="cerrar()">
+    <div class="lightbox-content" (click)="$event.stopPropagation()">
+      <button class="lightbox-cerrar" (click)="cerrar()">✕</button>
+      <img [src]="fotoAbierta.url" [alt]="fotoAbierta.alt" />
+      <p>{{ fotoAbierta.alt }}</p>
+    </div>
+  </div>
+</section>

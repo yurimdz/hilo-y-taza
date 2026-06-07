@@ -1,0 +1,19 @@
+<section id="testimonios" class="testimonios-section">
+  <div class="container">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <p class="section-subtitle">Experiencias reales de personas que pasaron por Hilo & Taza.</p>
+
+    <div class="testimonios-grid">
+      <div class="testimonio-card" *ngFor="let t of testimonios">
+        <div class="testimonio-cita">"</div>
+        <p class="testimonio-texto">{{ t.texto }}</p>
+        <div class="testimonio-footer">
+          <span class="testimonio-nombre">— {{ t.nombre }}</span>
+          <button class="audio-btn" (click)="toggleAudio(t)">
+            {{ audioActivo === t.id ? '⏸ Pausar' : '▶ Escuchar' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

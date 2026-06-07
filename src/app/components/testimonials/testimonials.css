@@ -1,0 +1,71 @@
+.testimonios-section {
+  background: var(--verde);
+}
+
+.testimonios-section .section-title,
+.testimonios-section .section-subtitle {
+  color: var(--crema);
+}
+
+.testimonios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+}
+
+.testimonio-card {
+  background: rgba(247,240,230,0.12);
+  border: 1px solid rgba(247,240,230,0.25);
+  border-radius: 16px;
+  padding: 36px 28px 28px;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-4px);
+}
+
+.testimonio-cita {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem;
+  color: var(--rosa);
+  line-height: 0.5;
+  margin-bottom: 20px;
+}
+
+.testimonio-texto {
+  color: var(--crema);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.testimonio-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testimonio-nombre {
+  color: var(--rosa);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.audio-btn {
+  background: var(--rosa);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: 'Lato', sans-serif;
+  transition: background 0.3s;
+}
+
+.audio-btn:hover {
+  background: var(--terracota);
+}

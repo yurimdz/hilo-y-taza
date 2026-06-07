@@ -1,0 +1,21 @@
+{
+  "menu": [
+    { "id": 1, "categoria": "Café", "nombre": "Espresso Clásico", "descripcion": "Café negro intenso, preparado al momento.", "precio": 1500 },
+    { "id": 2, "categoria": "Café", "nombre": "Latte de Vainilla", "descripcion": "Espresso con leche vaporizada y sirope de vainilla artesanal.", "precio": 2500 },
+    { "id": 3, "categoria": "Café", "nombre": "Matcha Latte", "descripcion": "Té matcha premium con leche de avena.", "precio": 2800 },
+    { "id": 4, "categoria": "Café", "nombre": "Cold Brew", "descripcion": "Café frío de extracción lenta, servido con hielo.", "precio": 2700 },
+    { "id": 5, "categoria": "Postre", "nombre": "Cheesecake de Maracuyá", "descripcion": "Cheesecake cremoso con coulis de maracuyá costarricense.", "precio": 3200 },
+    { "id": 6, "categoria": "Postre", "nombre": "Brownie de Chocolate", "descripcion": "Brownie húmedo con chispas de chocolate y sal marina.", "precio": 2500 },
+    { "id": 7, "categoria": "Postre", "nombre": "Galleta de Avena y Miel", "descripcion": "Horneada diariamente, con miel local de Guanacaste.", "precio": 1200 }
+  ],
+  "experiencias": [
+    { "id": 1, "nombre": "Pintura de Cerámica", "descripcion": "Pintá una pieza de cerámica a tu gusto y llevátela a casa.", "duracion": "90 min", "precio": 8500, "icono": "🏺" },
+    { "id": 2, "nombre": "Pintura en Lienzo", "descripcion": "Creá tu obra guiada por nuestra artista residente.", "duracion": "2 horas", "precio": 9000, "icono": "🖼️" },
+    { "id": 3, "nombre": "Pulseras Personalizadas", "descripcion": "Diseñá tu pulsera con mostacillas, dijes y hilo de colores.", "duracion": "60 min", "precio": 5500, "icono": "📿" },
+    { "id": 4, "nombre": "Joyería Personalizada", "descripcion": "Anillos y pulseras eternas hechos por nuestras artesanas.", "duracion": "45 min", "precio": 7000, "icono": "💍" }
+  ],
+  "testimonios": [
+    { "id": 1, "nombre": "Alejandra M.", "texto": "Vine con mis amigas a hacer pulseras y terminamos quedándonos tres horas. El café estaba delicioso y el ambiente es precioso.", "audio": "assets/audio/testimonio1.mp3" },
+    { "id": 2, "nombre": "Carlos R.", "texto": "Le propuse matrimonio a mi novia aquí mientras pintábamos cerámica. El lugar es mágico, totalmente recomendado.", "audio": "assets/audio/testimonio2.mp3" }
+  ]
+}
