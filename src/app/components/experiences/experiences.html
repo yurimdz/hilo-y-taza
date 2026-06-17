@@ -1,16 +1,26 @@
-<section id="experiencias">
+<section id="experiencias" class="bg-crema">
   <div class="container">
     <h2 class="section-title">Experiencias Creativas</h2>
     <p class="section-subtitle">Vení solo, en pareja o con amigos — siempre te llevás algo hecho con tus manos.</p>
+    
     <div class="experiences-grid">
       <div class="experience-card" *ngFor="let exp of experiencias">
-        <div class="exp-icon">{{ exp.icono }}</div>
-        <h3>{{ exp.nombre }}</h3>
-        <p>{{ exp.descripcion }}</p>
-        <div class="exp-footer">
-          <span class="exp-duracion">⏱ {{ exp.duracion }}</span>
-          <span class="exp-precio">₡{{ exp.precio | number }}</span>
+        
+        <div class="exp-image-wrap">
+          <img [src]="exp.imagen" alt="Clase de {{ exp.nombre }}" />
+          <span class="exp-badge-duracion">⏱ {{ exp.duracion }}</span>
         </div>
+
+        <div class="exp-card-body">
+          <h3>{{ exp.nombre }}</h3>
+          <p>{{ exp.descripcion }}</p>
+          
+          <div class="exp-footer">
+            <p class="exp-precio">₡{{ exp.precio | number }}</p>
+            <a href="#contacto" class="btn-exp-accion">Reservar espacio</a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>

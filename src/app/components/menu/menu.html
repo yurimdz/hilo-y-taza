@@ -1,4 +1,4 @@
-<section id="menu" class="menu-section">
+<section id="menu" class="bg-verde">
   <div class="container">
     <h2 class="section-title">Nuestro Menú</h2>
     <p class="section-subtitle">Café artesanal y postres hechos con amor, todos los días.</p>
@@ -13,13 +13,49 @@
     </div>
 
     <div class="menu-grid">
-      <div class="menu-card" *ngFor="let item of itemsFiltrados">
-        <div class="menu-card-body">
-          <span class="menu-categoria">{{ item.categoria }}</span>
-          <h3>{{ item.nombre }}</h3>
-          <p>{{ item.descripcion }}</p>
+      <div 
+        class="card-container" 
+        *ngFor="let item of itemsFiltrados"
+        (click)="alternarDetalle(item.id)">
+        
+        <div class="card-back-flip" [class.volteada]="idTarjetaVolteada === item.id">
+          
+          <div class="card-face card-front">
+            <div class="card-image-wrap">
+              <img [src]="item.imagen" alt="Fotografía de {{ item.nombre }}" />
+              <span class="menu-categoria">{{ item.categoria }}</span>
+            </div>
+            <div class="card-front-body">
+              <h3>{{ item.nombre }}</h3>
+              <p>{{ item.descripcion }}</p>
+              <span class="hint-interactivo">Toca para ver la receta secreta</span>
+            </div>
+            <div class="menu-precio">₡{{ item.precio | number }}</div>
+          </div>
+
+          <div class="card-face card-back">
+            <div class="card-back-header">
+              <span class="back-categoria">{{ item.categoria }}</span>
+              <h3>Receta e Ingredientes</h3>
+            </div>
+            
+            <div class="card-back-body">
+              <h4>Ingredientes Necesarios:</h4>
+              <ul>
+                <li *ngFor="let ing of item.ingredientes">🔹 {{ ing }}</li>
+              </ul>
+              
+              <h4>Modo de Preparación Manual:</h4>
+              <p class="preparacion-texto">{{ item.preparacion }}</p>
+            </div>
+            
+            <div class="card-back-footer">
+              <span class="hint-regresar"> ↩ Toca de nuevo para regresar</span>
+            </div>
+          </div>
+
         </div>
-        <div class="menu-precio">₡{{ item.precio | number }}</div>
+
       </div>
     </div>
   </div>

@@ -7,7 +7,7 @@ interface Experiencia {
   descripcion: string;
   duracion: string;
   precio: number;
-  icono: string;
+  imagen: string;
 }
 
 @Component({
@@ -23,11 +23,14 @@ export class Experiences implements OnInit {
   constructor(private cdr: ChangeDetectorRef) {}
 
   ngOnInit() {
-    fetch('assets/data/data.json')
+    fetch('/assets/data/data.json')
       .then(res => res.json())
       .then(data => {
-        this.experiencias = data.experiencias;
-        this.cdr.detectChanges();
-      });
+        if (data && data.experiencias) {
+          this.experiencias = data.experiencias;
+          this.cdr.detectChanges();
+        }
+      })
+      .catch(err => console.error('Error cargando experiencias:', err));
   }
 }
