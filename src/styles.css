@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap');
 
 :root {
+  --verde: #6B7F5E;
+  --verde-oscuro: #4E5E43;
+  --crema: #F7F0E6;
+  --crema-claro: #FAF6F0;
+  --oscuro: #2C2416;
   --rosa: #E8A5A5;
   --terracota: #C4714F;
-  --verde: #6B7F5E;
-  --crema: #F7F0E6;
-  --oscuro: #2C2416;
   --gris: #7A7060;
 }
 
@@ -21,16 +23,17 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: var(--crema);
-  color: var(--oscuro);
+  background-color: #6B7F5E; 
+  color: #F7F0E6;
+  line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
 }
 
 section {
-  padding: 80px 20px;
+  padding: 100px 20px;
 }
 
 .container {
@@ -39,15 +42,68 @@ section {
 }
 
 .section-title {
-  font-size: 2.2rem;
-  color: var(--terracota);
+  font-size: 2.6rem;
+  color: #E8A5A5 !important; 
   text-align: center;
   margin-bottom: 12px;
 }
 
 .section-subtitle {
   text-align: center;
-  color: var(--gris);
+  color: rgba(247, 240, 230, 0.85);
   font-size: 1.1rem;
-  margin-bottom: 48px;
+  margin-bottom: 58px;
+}
+
+.bg-verde {
+  background-color: #6B7F5E !important;
+  color: #F7F0E6 !important;
+}
+
+.bg-crema {
+  background-color: #F7F0E6 !important;
+  color: #2C2416 !important;
+}
+
+.bg-crema .section-title {
+  color: var(--rosa) !important; 
+}
+
+.bg-crema .section-subtitle {
+  color: #7A7060 !important;
+}
+
+.btn-primary, 
+.nav-cta, 
+.btn-assembly {
+  background-color: #6B7F5E !important;
+  background: #6B7F5E !important;
+  color: #ffffff !important;
+  border: none !important;
+  display: inline-block !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(196, 113, 79, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover, 
+.nav-cta:hover, 
+.btn-assembly:hover {
+  background-color: #4E5E43 !important; 
+  background: #4E5E43 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
 }

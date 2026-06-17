@@ -1,21 +1,239 @@
 {
   "menu": [
-    { "id": 1, "categoria": "Café", "nombre": "Espresso Clásico", "descripcion": "Café negro intenso, preparado al momento.", "precio": 1500 },
-    { "id": 2, "categoria": "Café", "nombre": "Latte de Vainilla", "descripcion": "Espresso con leche vaporizada y sirope de vainilla artesanal.", "precio": 2500 },
-    { "id": 3, "categoria": "Café", "nombre": "Matcha Latte", "descripcion": "Té matcha premium con leche de avena.", "precio": 2800 },
-    { "id": 4, "categoria": "Café", "nombre": "Cold Brew", "descripcion": "Café frío de extracción lenta, servido con hielo.", "precio": 2700 },
-    { "id": 5, "categoria": "Postre", "nombre": "Cheesecake de Maracuyá", "descripcion": "Cheesecake cremoso con coulis de maracuyá costarricense.", "precio": 3200 },
-    { "id": 6, "categoria": "Postre", "nombre": "Brownie de Chocolate", "descripcion": "Brownie húmedo con chispas de chocolate y sal marina.", "precio": 2500 },
-    { "id": 7, "categoria": "Postre", "nombre": "Galleta de Avena y Miel", "descripcion": "Horneada diariamente, con miel local de Guanacaste.", "precio": 1200 }
+    {
+      "id": 1,
+      "categoria": "Café",
+      "nombre": "Espresso Originario",
+      "descripcion": "Extracción intensa de café de especialidad con notas de chocolate oscuro y cítricos dulzones.",
+      "precio": 1800,
+      "imagen": "assets/img/espresso.jpg",
+      "ingredientes": [
+        "18g de café molido fino (Origen Tarrazú)",
+        "36ml de agua purificada caliente"
+      ],
+      "preparacion": "Se realiza una molienda fina directa en el porta-filtro. Se tampa uniformemente y se calibra la máquina de espresso para lograr una extracción óptima a 9 bares de presión."
+    },
+    {
+      "id": 2,
+      "categoria": "Café",
+      "nombre": "Capuccino Sedoso",
+      "descripcion": "Balance perfecto entre un espresso robusto, leche cremada al vapor y una densa capa de microespuma.",
+      "precio": 2500,
+      "imagen": "assets/img/capuccino.jpg",
+      "ingredientes": [
+        "1 shot de espresso concentrado",
+        "150ml de leche entera fresca",
+        "Polvo de cacao para decorar"
+      ],
+      "preparacion": "Se extrae el shot de espresso en la taza. Se texturiza la leche fría con la lanceta de vapor a 65°C buscando una textura sedosa y se vierte con movimientos concéntricos."
+    },
+    {
+      "id": 3,
+      "categoria": "Café",
+      "nombre": "Matcha Latte Ceremonial",
+      "descripcion": "Té verde matcha de grado ceremonial batido artesanalmente con batidor de bambú, servido con leche cremosa y un toque de miel.",
+      "precio": 2900,
+      "imagen": "assets/img/matcha.jpg",
+      "ingredientes": [
+        "3g de té verde matcha puro premium",
+        "60ml de agua caliente a 80°C",
+        "180ml de leche de avena o entera fresca",
+        "1 cucharadita de miel de abeja orgánica"
+      ],
+      "preparacion": "Se tamiza el polvo de matcha en un tazón (chawan). Se agrega el agua caliente y se bate enérgicamente en forma de 'W' con el batidor de bambú (chasen) hasta crear una espuma densa. Se vierte sobre la leche previamente texturizada."
+    },
+    {
+      "id": 4,
+      "categoria": "Café",
+      "nombre": "Americano Balanceado",
+      "descripcion": "Un shot doble de espresso rebajado con agua caliente, ideal para apreciar las notas sutiles del grano.",
+      "precio": 1900,
+      "imagen": "assets/img/americano.jpg",
+      "ingredientes": [
+        "1 shot doble de espresso premium",
+        "120ml de agua caliente purificada"
+      ],
+      "preparacion": "Se extrae el espresso doble directamente sobre el agua caliente pre-servida en la taza para mantener la sutil capa de crema en la superficie."
+    },
+    {
+      "id": 5,
+      "categoria": "Postre",
+      "nombre": "Cheesecake de Frutos Rojos",
+      "descripcion": "Base crujiente de galleta artesanal, crema de queso horneada y una reducción natural de moras y fresas.",
+      "precio": 3200,
+      "imagen": "assets/img/cheesecake.jpg",
+      "ingredientes": [
+        "Crema de queso premium",
+        "Galleta dulce triturada con mantequilla avellanada",
+        "Coulis casero de fresas, moras y arándanos"
+      ],
+      "preparacion": "Se compacta la base de galleta. Se bate el queso crema con azúcar orgánica, se hornea a baño María a 160°C por 50 minutos. Se enfría y se corona con el coulis denso."
+    },
+    {
+      "id": 6,
+      "categoria": "Postre",
+      "nombre": "Cheesecake de Limón",
+      "descripcion": "Crema fría and aireada de queso crema y jugo de limón criollo, sobre una base fina de galleta cítrica.",
+      "precio": 3000,
+      "imagen": "assets/img/cheesecake-limon.jpg",
+      "ingredientes": [
+        "Queso crema batido",
+        "Zumo y ralladura de limón fresco",
+        "Base de galletas de vainilla trituradas"
+      ],
+      "preparacion": "Se mezcla el queso crema con la leche condensada y el zumo de limón hasta espesar. Se vierte sobre la base de galleta y se refrigera por un mínimo de 4 horas antes de decorar con ralladura."
+    },
+    {
+      "id": 7,
+      "categoria": "Postre",
+      "nombre": "Pan de Banano & Nueces",
+      "descripcion": "Bizcocho húmedo y artesanal hecho con bananos maduros, especias dulces y trocitos de nuez tostada.",
+      "precio": 2000,
+      "imagen": "assets/img/pan-banano.jpg",
+      "ingredientes": [
+        "Bananos maduros machacados",
+        "Harina de trigo premium",
+        "Nueces picadas y una pizca de canela"
+      ],
+      "preparacion": "Se integran los bananos con los ingredientes húmedos. Se tamizan los secos y se incorporan las nueces de forma envolvente. Se hornea a 180°C por 45 minutos hasta dorar."
+    },
+    {
+      "id": 8,
+      "categoria": "Postre",
+      "nombre": "Flan Casero de Vainilla",
+      "descripcion": "Textura sedosa y cremosa horneada lentamente, bañada en un caramelo ámbar tradicional hecho en casa.",
+      "precio": 2200,
+      "imagen": "assets/img/flan.jpg",
+      "ingredientes": [
+        "Leche condensada y evaporada",
+        "Huevos frescos de granja",
+        "Esencia natural de vainilla y azúcar para el caramelo"
+      ],
+      "preparacion": "Se derrite el azúcar en los moldes para crear el caramelo. Se licúan los demás ingredientes, se vierte en el molde y se hornea a baño María a 150°C por 1 hora completa."
+    },
+    {
+      "id": 9,
+      "categoria": "Postre",
+      "nombre": "Chocoflan Imposible",
+      "descripcion": "La combinación perfecta de dos mundos: una capa esponjosa de queque de chocolate oscuro y una capa de flan cremoso.",
+      "precio": 2600,
+      "imagen": "assets/img/chocoflan.jpg",
+      "ingredientes": [
+        "Mezcla de bizcocho de chocolate oscuro",
+        "Mezcla base de flan tradicional",
+        "Capa de cajeta o caramelo en el fondo"
+      ],
+      "preparacion": "Se vierte el caramelo, luego la masa de chocolate y encima la mezcla líquida de flan. Durante el horneado a baño María, las densidades cambian invirtiendo las capas mágicamente."
+    },
+    {
+      "id": 10,
+      "categoria": "Postre",
+      "nombre": "Crepas de Nutella & Fresa",
+      "descripcion": "Masa delgada de crepa artesanal rellena de Nutella cremosa, rodajas de fresas frescas y azúcar glass.",
+      "precio": 2900,
+      "imagen": "assets/img/crepas.jpg",
+      "ingredientes": [
+        "Harina, leche y huevos batidos",
+        "Nutella premium",
+        "Fresas frescas picadas"
+      ],
+      "preparacion": "Se cocina la masa delgada en una sartén caliente con mantequilla por ambos lados. Se retira, se unta la Nutella, se agregan las fresas y se dobla en triángulo para servir caliente."
+    },
+    {
+      "id": 11,
+      "categoria": "Postre",
+      "nombre": "Pancakes de Arándanos",
+      "descripcion": "Torre de tres pancakes esponjosos repletos de arándanos calientes, acompañados de sirope de maple puro.",
+      "precio": 3100,
+      "imagen": "assets/img/pancakes.jpg",
+      "ingredientes": [
+        "Masa de pancake esponjosa",
+        "Arándanos azules frescos",
+        "Mantequilla y sirope de maple artesanal"
+      ],
+      "preparacion": "Se vierte la masa en la plancha caliente. Se dejan caer arándanos frescos antes de voltear. Se doran por ambos lados y se sirven apilados con un cubo de mantequilla encima."
+    },
+    {
+      "id": 12,
+      "categoria": "Postre",
+      "nombre": "Roll de Canela Especial",
+      "descripcion": "Masa madre hojaldrada horneada a la perfección, rellena de canela de Ceilán, almendras tostadas y glaseado ligero.",
+      "precio": 2200,
+      "imagen": "assets/img/rolls.jpg",
+      "ingredientes": [
+        "Harina de trigo de alta fuerza con masa madre",
+        "Canela de Ceilán molida puro",
+        "Glaseado de azúcar glass y un toque de queso crema"
+      ],
+      "preparacion": "Se extiende la masa madre y se espolvorea la mezcla de canela. Se enrolla, se corta en porciones simétricas y se deja leudar. Se hornea a 180°C hasta dorar y se glasea en caliente."
+    }
   ],
   "experiencias": [
-    { "id": 1, "nombre": "Pintura de Cerámica", "descripcion": "Pintá una pieza de cerámica a tu gusto y llevátela a casa.", "duracion": "90 min", "precio": 8500, "icono": "🏺" },
-    { "id": 2, "nombre": "Pintura en Lienzo", "descripcion": "Creá tu obra guiada por nuestra artista residente.", "duracion": "2 horas", "precio": 9000, "icono": "🖼️" },
-    { "id": 3, "nombre": "Pulseras Personalizadas", "descripcion": "Diseñá tu pulsera con mostacillas, dijes y hilo de colores.", "duracion": "60 min", "precio": 5500, "icono": "📿" },
-    { "id": 4, "nombre": "Joyería Personalizada", "descripcion": "Anillos y pulseras eternas hechos por nuestras artesanas.", "duracion": "45 min", "precio": 7000, "icono": "💍" }
+    {
+      "id": 1,
+      "nombre": "Pintura de Cerámica",
+      "descripcion": "Pintá una pieza de cerámica a tu gusto (tazas, platos o figuras artesanales) guiado por técnicas de esmaltado y llevátela a casa.",
+      "duracion": "90 min",
+      "precio": 8500,
+      "imagen": "assets/img/ceramica.jpg"
+    },
+    {
+      "id": 2,
+      "nombre": "Pintura en Lienzo",
+      "descripcion": "Creá tu propia obra de arte en acrílico guiada paso a paso por nuestra artista residente. Incluye todos los materiales y una bebida de cortesía.",
+      "duracion": "2 horas",
+      "precio": 9000,
+      "imagen": "assets/img/lienzo.jpg"
+    },
+    {
+      "id": 3,
+      "nombre": "Pulseras Personalizadas",
+      "descripcion": "Diseñá e hila tu propio set de pulseras utilizando mostacillas importadas, dijes de acero inoxidable, hilos premium y nudos técnicos.",
+      "duracion": "60 min",
+      "precio": 5500,
+      "imagen": "assets/img/pulseras.jpg"
+    },
+    {
+      "id": 4,
+      "nombre": "Joyería Personalizada",
+      "descripcion": "Personalizá y dale tu toque único a anillos y dijes pre-forjados por maestros artesanos, utilizando técnicas guiadas de texturizado y grabado.",
+      "duracion": "2 horas",
+      "precio": 12000,
+      "imagen": "assets/img/joyeria.jpg"
+    }
   ],
   "testimonios": [
-    { "id": 1, "nombre": "Alejandra M.", "texto": "Vine con mis amigas a hacer pulseras y terminamos quedándonos tres horas. El café estaba delicioso y el ambiente es precioso.", "audio": "assets/audio/testimonio1.mp3" },
-    { "id": 2, "nombre": "Carlos R.", "texto": "Le propuse matrimonio a mi novia aquí mientras pintábamos cerámica. El lugar es mágico, totalmente recomendado.", "audio": "assets/audio/testimonio2.mp3" }
+    {
+      "id": 1,
+      "nombre": "Valeria Monge",
+      "rol": "Cliente Frecuente",
+      "comentario": "Un lugar mágico en Liberia. Fui a pintar una taza de cerámica mientras me tomaba un capuccino delicioso.",
+      "audio": "assets/audio/testimonio-valeria.mp3",
+      "calificacion": 5
+    },
+    {
+      "id": 2,
+      "nombre": "Esteban Cordero",
+      "rol": "Artista Aficionado",
+      "comentario": "La clase de pintura en lienzo superó mis expectativas. El ambiente con música suave te relaja por completo.",
+      "audio": "assets/audio/testimonio-esteban.mp3",
+      "calificacion": 5
+    },
+    {
+      "id": 3,
+      "nombre": "Mariela Castro",
+      "rol": "Visitante",
+      "comentario": "Me encantó el concepto de Hilo & Taza. Hacer mis propias pulseras personalizadas fue súper divertido.",
+      "audio": "assets/audio/testimonio-mariela.mp3",
+      "calificacion": 5
+    }
+  ],
+  "galeria": [
+    { "id": 1, "imagen": "assets/img/galeria1.jpg", "alt": "Espacio de pintura Hilo & Taza" },
+    { "id": 2, "imagen": "assets/img/galeria2.jpg", "alt": "Taza de capuccino artesanal" },
+    { "id": 3, "imagen": "assets/img/galeria3.jpg", "alt": "Detalle de piezas de cerámica" },
+    { "id": 4, "imagen": "assets/img/galeria4.jpg", "alt": "Clientes creando pulseras" },
+    { "id": 5, "imagen": "assets/img/galeria5.jpg", "alt": "Barra de café de especialidad" },
+    { "id": 6, "imagen": "assets/img/galeria6.jpg", "alt": "Taller de pintura en lienzo" }
   ]
 }
