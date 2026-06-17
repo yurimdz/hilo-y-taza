@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface FotoGaleria {
   id: number;
-  url: string;
+  imagen: string;
   alt: string;
 }
 
@@ -14,32 +14,20 @@ interface FotoGaleria {
   templateUrl: './gallery.html',
   styleUrl: './gallery.css'
 })
-export class Gallery {
-  fotoActiva: number = 0;
+export class Gallery implements OnInit {
+  fotos: FotoGaleria[] = [];
 
-  fotos: FotoGaleria[] = [
-    { id: 1, url: 'assets/img/galeria1.jpg', alt: 'Café artesanal' },
-    { id: 2, url: 'assets/img/galeria2.jpg', alt: 'Pintura de cerámica' },
-    { id: 3, url: 'assets/img/galeria3.jpg', alt: 'Pulseras personalizadas' },
-    { id: 4, url: 'assets/img/galeria4.jpg', alt: 'Postres del día' },
-    { id: 5, url: 'assets/img/galeria5.jpg', alt: 'Ambiente del café' },
-  ];
+  constructor(private cdr: ChangeDetectorRef) {}
 
-  fotoAbierta: FotoGaleria | null = null;
-
-  abrir(foto: FotoGaleria) {
-    this.fotoAbierta = foto;
-  }
-
-  cerrar() {
-    this.fotoAbierta = null;
-  }
-
-  anterior() {
-    this.fotoActiva = (this.fotoActiva - 1 + this.fotos.length) % this.fotos.length;
-  }
-
-  siguiente() {
-    this.fotoActiva = (this.fotoActiva + 1) % this.fotos.length;
+  ngOnInit() {
+    fetch('/assets/data/data.json')
+      .then(res => res.json())
+      .then(data => {
+        if (data && data.galeria) {
+          this.fotos = data.galeria;
+          this.cdr.detectChanges();
+        }
+      })
+      .catch(err => console.error('Error cargando la galería:', err));
   }
 }

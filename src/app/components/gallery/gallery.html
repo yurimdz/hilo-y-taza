@@ -1,35 +1,26 @@
-<section id="galeria" class="galeria-section">
-  <div class="container">
-    <h2 class="section-title">Galería</h2>
-    <p class="section-subtitle">Momentos, creaciones y el ambiente que nos define.</p>
+<section id="galeria" class="gallery-section">
+  <div class="container-fluid">
+    <h2 class="section-title">Nuestro Espacio</h2>
+    <p class="section-subtitle">Un vistazo a los momentos, el arte y el café de cada día.</p>
 
-    <div class="galeria-principal">
-      <button class="nav-btn prev" (click)="anterior()">&#8592;</button>
-      <div class="galeria-imagen-wrap" (click)="abrir(fotos[fotoActiva])">
-        <img [src]="fotos[fotoActiva].url" [alt]="fotos[fotoActiva].alt" />
-        <div class="galeria-overlay">
-          <span>Ver imagen</span>
+    <div class="infinite-carousel-track">
+      <div class="carousel-strip">
+        
+        <div class="gallery-item" *ngFor="let item of fotos">
+          <img [src]="item.imagen" alt="{{ item.alt }}" />
+          <div class="gallery-overlay-hint">
+            <span>Hilo & Taza</span>
+          </div>
         </div>
+
+        <div class="gallery-item" *ngFor="let item of fotos">
+          <img [src]="item.imagen" alt="{{ item.alt }}" />
+          <div class="gallery-overlay-hint">
+            <span>Hilo & Taza</span>
+          </div>
+        </div>
+
       </div>
-      <button class="nav-btn next" (click)="siguiente()">&#8594;</button>
-    </div>
-
-    <div class="galeria-thumbs">
-      <img
-        *ngFor="let foto of fotos; let i = index"
-        [src]="foto.url"
-        [alt]="foto.alt"
-        [class.activa]="i === fotoActiva"
-        (click)="fotoActiva = i" />
-    </div>
-  </div>
-
-  <!-- Lightbox -->
-  <div class="lightbox" *ngIf="fotoAbierta" (click)="cerrar()">
-    <div class="lightbox-content" (click)="$event.stopPropagation()">
-      <button class="lightbox-cerrar" (click)="cerrar()">✕</button>
-      <img [src]="fotoAbierta.url" [alt]="fotoAbierta.alt" />
-      <p>{{ fotoAbierta.alt }}</p>
     </div>
   </div>
 </section>
