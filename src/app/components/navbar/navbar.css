@@ -4,20 +4,23 @@
   width: 100%;
   z-index: 1000;
   padding: 20px 0;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   background: transparent;
 }
 
 .navbar.scrolled {
-  background: var(--crema);
-  padding: 12px 0;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  background: rgba(247, 240, 230, 0.95);
+  padding: 14px 0;
+  box-shadow: 0 4px 30px rgba(44, 36, 22, 0.08);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(107, 127, 94, 0.1);
 }
 
 .nav-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,14 +28,15 @@
 
 .nav-logo {
   font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+  font-weight: 700;
   color: var(--crema);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .navbar.scrolled .nav-logo {
-  color: var(--terracota);
+  color: var(--rosa);
 }
 
 .nav-links {
@@ -46,8 +50,9 @@
   text-decoration: none;
   color: var(--crema);
   font-size: 0.95rem;
+  font-weight: 700;
   letter-spacing: 0.5px;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .navbar.scrolled .nav-links a {
@@ -55,19 +60,42 @@
 }
 
 .nav-links a:hover {
-  color: var(--rosa);
+  color: var(--rosa) !important;
 }
 
-.nav-cta {
-  background: var(--terracota);
+.navbar.scrolled .nav-links a:hover {
+  color: var(--rosa) !important;
+}
+
+.nav-links .nav-cta {
+  background-color: #6B7F5E !important;
+  background: #6B7F5E !important;
   color: var(--crema) !important;
-  padding: 10px 22px;
-  border-radius: 25px;
-  transition: background 0.3s !important;
+  padding: 10px 24px !important;
+  border-radius: 25px !important;
+  font-weight: 700 !important;
+  display: inline-block !important;
+  border: none !important;
+  box-shadow: 0 4px 15px rgba(196, 113, 79, 0.2) !important;
+  transition: all 0.3s ease !important;
 }
 
-.nav-cta:hover {
-  background: var(--verde) !important;
+.nav-links .nav-cta:hover {
+  background-color: #F569AE !important;
+  background: #F569AE !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+}
+
+.navbar.scrolled .nav-cta {
+  background-color: #6B7F5E !important;
+  background: #6B7F5E !important;
+  color: white !important;
+}
+
+.navbar.scrolled .nav-cta:hover {
+  background-color: var(--verde-oscuro) !important;
+  background: var(--verde-oscuro) !important;
 }
 
 @media (max-width: 768px) {
